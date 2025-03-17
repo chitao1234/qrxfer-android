@@ -55,4 +55,5 @@
     <string name="custom_chunk_size">Custom Chunk Size (bytes)</string>
     <string name="custom_delay">Custom Delay (ms)</string>
     <string name="apply">Apply</string>
+    <string name="cancel">Cancel</string>
 </resources>

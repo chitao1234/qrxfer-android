@@ -33,7 +33,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.text.DecimalFormat
-import androidx.core.view.isEmpty
 
 /**
  * Activity for sending files via QR code
@@ -392,7 +391,7 @@ class SendActivity : AppCompatActivity() {
     
     private fun updateChunkIndicator(index: Int) {
         // Safety check
-        if (index < 0 || binding.chunksContainer.isEmpty()) {
+        if (index < 0 || binding.chunksContainer.childCount == 0) {
             return
         }
         
@@ -508,10 +507,12 @@ class SendActivity : AppCompatActivity() {
         val dialog = androidx.appcompat.app.AlertDialog.Builder(this)
             .setTitle(title)
             .setView(dialogView)
-            .setPositiveButton("Apply") { _, _ -> 
+            .setPositiveButton(getString(R.string.apply)) { _, _ -> 
                 onConfirm(editText.text.toString())
             }
-            .setNegativeButton("Cancel", null)
+            .setNegativeButton(getString(R.string.cancel)) { dialog, _ ->
+                dialog.dismiss()
+            }
             .create()
         
         dialog.show()
