@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="error_correction_levels">
+        <item>Low (L)</item>
+        <item>Medium (M)</item>
+        <item>Quartile (Q)</item>
+        <item>High (H)</item>
+    </string-array>
+    
+    <string-array name="error_correction_values">
+        <item>L</item>
+        <item>M</item>
+        <item>Q</item>
+        <item>H</item>
+    </string-array>
+</resources>
